@@ -1,0 +1,31 @@
+programa {
+  funcao inicio() {
+    cadeia problema = "salario bruto menos os descontos"
+    real valorHora, qtdHoras, salarioBruto, ir, descontoIr
+
+    escreva("Digite o valor da hora: ")
+    leia(valorHora)
+
+    escreva("Digite a quantidade de horas trabalhadas no mes: ")
+    leia(qtdHoras)
+
+    salarioBruto = valorHora * qtdHoras
+
+
+    escreva("Salário bruto (", valorHora, "*", qtdHoras, "): R$  ", salarioBruto + "\n")
+
+    se (salarioBruto < 900) {
+      ir = 0
+    } senao se (salarioBruto => 900 e salarioBruto <= 1500) {
+      descontoIr = 5
+      ir = salarioBruto * 0.05
+    } senao se (salarioBruto > 1500 e salarioBruto <= 2500) {
+      ir = salarioBruto * 0.1
+    } senao se (salarioBruto > 2500) {
+      ir = salarioBruto * 0.2
+    }
+
+    escreva("( – ) IR (", descontoIr, "%)   : R$ ", ir, "\n")
+  }
+}
+
