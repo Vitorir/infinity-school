@@ -1,5 +1,9 @@
-import modulos.meu_modulo as meu_modulo
-from modulos.meu_modulo import *
-from vogais_e_consoantes import *
+import modules.meu_modulo as meu_modulo
+from modules.meu_modulo import *
+#from vogais_e_consoantes import *
+import pandas
+from pandas import *
+from tkinter import *
 
-print(meu_modulo.conta_letras('Felicidade'))
+Tk
+meu_modulo.mensagem()
