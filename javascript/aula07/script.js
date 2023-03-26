@@ -1,8 +1,5 @@
 let btn = document.querySelector('button')
 
-btn.addEventListener('click', () => {
-    alert('Você clicou no botão')
-})
 
 // Pegando os elementos que serao manipulados
 let resultado = document.querySelector('#resultado')
@@ -28,8 +25,10 @@ let multiplicar = document.querySelector('#multiplicar')
 // Pegando os botões limpar e igual
 let limpar = document.querySelector('#limpar')
 let igual = document.querySelector('#igual')
+let decimal = document.querySelector('#decimal')
 
 
+// Alterar 
 zero.addEventListener('click', () => [
     resultado.value = resultado.value + "0"
 ])
@@ -59,4 +58,30 @@ oito.addEventListener('click', () => [
 ])
 nove.addEventListener('click', () => [
     resultado.value = resultado.value + "9"
+])
+
+// Operadores
+somar.addEventListener('click', () => [
+    resultado.value = resultado.value + "+"
+])
+subtrair.addEventListener('click', () => [
+    resultado.value = resultado.value + "-"
+])
+dividir.addEventListener('click', () => [
+    resultado.value = resultado.value + "/"
+])
+multiplicar.addEventListener('click', () => [
+    resultado.value = resultado.value + "*"
+])
+
+// Botões
+limpar.addEventListener('click', () => [
+    resultado.value = ""
+])
+decimal.addEventListener('click', () => [
+    resultado.value = resultado.value + "."
+])
+
+igual.addEventListener('click', () => [
+    resultado.value = eval(resultado.value)
 ])
