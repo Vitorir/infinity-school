@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body{
+	margin: 0;
+	font-family: 'Oswald', sans-serif;
+}
+
+.main-login{
+
+	width: 100vw;
+	height: 100vh;
+	background: #000820;
+	display: flex; /*colocar do lado*/
+	justify-content: center; /*centralizar*/
+	align-items: center;  /*centralizar e descer*/
+}
+
+.left-login{
+
+	width: 50vw;
+	height: 100vh;
+	display: flex; /*colocar do lado*/
+	justify-content: center; /*centralizar*/
+	align-items: center;  /*centralizar e descer*/
+	flex-direction: column; /*vai descer o outro texto*/
+}
+
+.left-login > h1{
+	font-size: 3vw;
+	color: #81DBFF; /*cor da fonte*/
+}
+
+.right-login{
+
+	width: 50vw;
+	height: 100vh;
+	display: flex; /*colocar do lado*/
+	justify-content: center; /*centralizar*/
+	align-items: center;  /*centralizar e descer*/
+
+}
+
+.card-login{
+	width: 60%;
+	display: flex; /*colocar do lado*/
+	justify-content: center; /*centralizar*/
+	align-items: center;  /*centralizar e descer*/
+	flex-direction: column;
+	padding: 30px 35px;
+	background: #00435E;
+	border-radius: 20px;/*Deixar mais redonda*/
+	box-shadow: 0px 10px 40px #00000056; 
+}
+
+.card-login > h1{ 
+
+	color: #81DBFF; /* cor */
+	font-weight: 800;  /* grosura da fonte */
+	margin: 0;
+}
+
+.textfild{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start; /* troca de eixos  */
+	justify-content: center ; /* colocar um em baixo do outro */
+	margin: 10px;
+}
+
+.textfild > input {
+
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+	padding: 15px;
+	background: #226986;
+	color: #81DBFF;
+	font-size: 12pt;
+	box-shadow: 0px 10px 40px #00000056;
+	outline: none; /*Tira a caixa de texto quadrada do input*/
+	box-sizing: border-box; /*deixar do tamanho da div*/
+}
+
+
+.textfild > label {
+
+color: #81DBFF;
+margin-bottom: 10px;
+
+}
+
+
+.imagem {
+	width: 35vw;
+}
+
+
+.textfild > input::placeholder{
+	color: #f0ffff94;
+}
+
+
+.btn-login
+{
+	width: 100%;
+	padding: 16px 0px;
+	margin: 25px;
+	border: none;
+	border-radius: 8px;	
+	outline: none;
+	text-transform: uppercase; /*Colocar as letras em maiusculo*/
+	font-weight: 800; /*Deixar a fonte grossa*/
+	letter-spacing: 2px; /*Espaçamento da fonte*/
+	color: #004561;
+	background:#81DBFF;
+	cursor: pointer;
+	box-shadow: 0px 10px 40px #8CDEFF; /*sobra do botão*/
+}
