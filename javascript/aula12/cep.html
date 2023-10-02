@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="cep">CEP:</label>
+    <input id="cep" type="text">
+    <button onclick="buscarCep()">Buscar</button>
+
+    <div class="resultado"></div>
+
+    <script>
+        async function buscarCep() {
+            const cep = document.getElementById("cep").value;
+            const url = `https://cep.awesomeapi.com.br/json/${cep}`;
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Erro na busca do CEP');
+                }
+                const data = await response.json();
+                exibirResultado(data);
+
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        function exibirResultado(data) {
+            const resultadoDiv = document.querySelector('.resultado');
+            resultadoDiv.textContent = JSON.stringify(data);
+        }
+    </script>
+</body>
+</html>

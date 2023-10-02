@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnCarregar" onclick="carregarRacas()">Carregar Raças</button>
+    <div id="listaRacas"></div>
+
+    <script>
+        let listaRacas = document.getElementById("listaRacas");
+
+        function carregarRacas(){
+            const url= 'https://dog.ceo/api/breeds/list/all'
+
+            fetch(url).then(function(response){
+                if(response.ok){
+                    return response.json()
+                }else{
+                    throw new Error('Deu ruim! Erro ao carregar os usuários')
+                }
+            }).then(function(data){
+                var racas= data.message;
+
+                let listaRacas= document.getElementById('listaRacas')
+                const nomeRacas = Object.keys(racas);
+
+                nomeRacas.forEach(raca => {
+                    let umaRaca = document.createElement('p')
+                    listaRacas.appendChild(umaRaca)
+                });
+
+            }).catch(error=>{
+                alert(error.message)
+            })
+        }
+
+    </script>
+
+
+
+</body>
+</html>

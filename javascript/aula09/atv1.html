@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Programação Fullstack - Infinity School</h1>
+
+    <ol>
+        <li>Lógica de Progamação</li>
+        <li>Python</li>
+        <li>Introdução a Data Science</li>
+        <li>HTML/CSS</li>
+        <li>Javascript</li>
+        <li>ReactJS</li>
+        <strong style="color: red;"></strong>
+    </ol>
+
+    <script>
+        let lista = document.getElementsByTagName('li');
+        console.log(lista);
+
+        for (let index = 0; index < lista.length - 1; index++) {
+            lista[index].innerHTML = `${lista[index].innerText} - 
+        <strong style="color: red;">concluído</strong>`
+        }
+    </script>
+</body>
+</html>

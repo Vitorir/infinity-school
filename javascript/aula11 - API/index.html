@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnCarregar" onclick="carregarUsuarios()">Carregar Usuários</button>
+    <div id="usuarios"></div>
+
+    <script>
+
+        function carregarUsuarios(){
+            const url= 'https://dog.ceo/api/breeds/image/random'
+
+            fetch(url).then(function(response){
+                if(response.ok){
+                    return response.json()
+                }else{
+                    throw new Error('Deu ruim! Erro ao carregar os usuários')
+                }
+            }).then(function(dadosRetorno){
+                var usuarios=dadosRetorno.data
+
+                let listaUsuarios= document.getElementById('usuarios')
+
+                usuarios.forEach(usuario => {
+                    let itemLista = document.createElement('p')
+                    itemLista.textContent= usuario.first_name + ' ' + usuario.last_name
+                    listaUsuarios.appendChild(itemLista)
+                    
+                });
+
+            }).catch(error=>{
+                alert(error.message)
+            })
+        }
+
+        let btn = document.getElementById('btnCarregar')
+        btn.addEventListener('click', carregarUsuarios())
+
+    </script>
+
+
+
+</body>
+</html>

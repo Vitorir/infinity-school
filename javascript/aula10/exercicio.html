@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulário de Cadastro</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+        }
+
+        #btnRecarregar,
+        #btnEnviar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Formulário de Cadastro</h2>
+    <form>
+        <label for="nomeLoja">Nome da Loja:</label>
+        <input type="text" id="nomeLoja">
+        <br><br>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade">
+        <br><br>
+
+        <label for="totalVendas">Valor Total de Vendas (R$):</label>
+        <input type="number" id="totalVendas"><br><br>
+
+        <input type="button" value="Validar" onclick="validarForm()">
+    </form>
+
+    <p id="msgErro"></p>
+
+    <button id="btnEnviar">Enviar</button>
+
+    <button id="btnRecarregar" style="display: none;" onclick="location.reload()">Recarregar a Página</button>
+
+
+    <script>
+        // Se todos os campos estão preenchidos.
+        // Se o valor total de venda é maior ou igual a zero.
+
+        function validarForm() {
+            let nome = document.getElementById('nomeLoja');
+            let cidade = document.getElementById('cidade');
+            let totalVendas = document.getElementById('totalVendas');
+
+            if (nome.value === '' || cidade.value === '' || totalVendas.value === '') {
+                throw new Error('Algum campo não está preenchido!');
+            }
+        }
+
+        try {
+            validarForm();
+        } catch (error) {
+            alert(error.message);
+            console.log(error);
+        }
+    </script>
+</body>
+
+</html>

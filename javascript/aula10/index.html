@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Conta</h1>
+
+    <label for="entrada">Entrada: </label> <br>
+    <input type="number" id="entrada" placeholder="R$ 0,00" oninput="calcularValores()"> <br> <br>
+
+    <label for="refeicao">Refeição: </label> <br>
+    <input type="number" id="refeicao" placeholder="R$ 0,00" oninput="calcularValores()"> <br> <br>
+
+    <label for="sobremesa">Sobremesa: </label> <br>
+    <input type="number" id="sobremesa" placeholder="R$ 0,00" oninput="calcularValores()"> <br> <br>
+
+    <label for="bebida">Bebida: </label> <br>
+    <input type="number" id="bebida" placeholder="R$ 0,00" oninput="calcularValores()"> <br> <br>
+
+    <h2>Resumo do Pedido</h2>
+    <p id="total">Total de Consumo</p>
+    <p id="gorjeta">Gorjeta (10%)</p>
+    <p id="valor">Valor a pagar</p>
+
+
+    <script>
+        function calcularValores() {
+
+            const entrada = document.getElementById('entrada');
+            const refeicao = document.getElementById('refeicao');
+            const sobremesa = document.getElementById('sobremesa');
+            const bebida = document.getElementById('bebida');
+
+            let valorTotal = parseFloat(entrada.value || 0) + parseFloat(refeicao.value || 0) + parseFloat(sobremesa.value || 0) +
+                parseFloat(bebida.value || 0);
+            document.getElementById('total').innerHTML = "O valor total é: " + valorTotal.toFixed(2);
+
+            let gorjeta = valorTotal * 0.1;
+            document.getElementById('gorjeta').innerHTML = "O valor da gorjeta é: " + gorjeta.toFixed(2);
+
+            let valorPagar = valorTotal + gorjeta;
+            document.getElementById('valor').innerHTML = "O valor a pagar é: " + valorPagar.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

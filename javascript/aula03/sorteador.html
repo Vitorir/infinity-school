@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">w
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        var sorteado = Math.trunc(Math.random() * 10);
+
+
+        var guess = parseInt(prompt("Adivinhe um numero entre 0 e 10: "));
+        while (guess != sorteado) {
+            guess = parseInt(prompt("Adivinhe um numero entre 0 e 10: "));
+        }
+        console.log(sorteado);
+        console.log(`Parabéns, o número adivihado, ${guess} é igual ao sorteado`);
+
+    </script>
+</body>
+
+</html>

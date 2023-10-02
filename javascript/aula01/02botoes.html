@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somador e Subtrator</title>
+</head>
+<body>
+    <span id="contador">Valor</span> <br> <br>
+    <button id="inc" onclick="incrementa()">Incrementar</button>
+    <button id="dec" onclick="decrementa()">Decrementar</button>
+    <button id="reset" onclick="reset()">Resetar</button>
+
+    <script>
+        // Pega o elemento identificado como contador
+        let cont = 0;
+        let contador = document.getElementById("contador");
+        
+        function incrementa() {
+            cont++;
+            contador.innerHTML = cont;
+        }
+
+        function decrementa() {
+            cont--;
+            contador.innerHTML = cont;
+        }
+
+        function reset() {
+            cont = 0;
+            contador.innerHTML = cont;
+        }
+    </script>
+</body>
+</html>

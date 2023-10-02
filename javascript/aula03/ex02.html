@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="resposta"></p>
+
+    <script>
+        var faturamento = 5000;
+        var soma = 0;
+        for (let index = 0; index < 5; index++) {
+            var fatura = parseFloat(prompt("Digite o valor: "));
+            soma = soma + fatura;
+        }
+
+        if (soma >= faturamento) {
+            var resposta = soma - faturamento;
+        }
+
+        console.log(resposta);
+        document.getElementById("resposta").innerHTML = resposta;
+    </script>
+</body>
+</html>

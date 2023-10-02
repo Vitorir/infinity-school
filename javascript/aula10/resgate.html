@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Assumenda, consequuntur dolor! Aspernatur sequi iure doloribus dolore vitae repellendus minus deleniti,
+        fugiat quaerat provident veritatis laboriosam repudiandae ad odit praesentium. Ut?</p>
+
+    <script>
+        function resgatarId(id) {
+            const dom = document.getElementById(id);
+
+            if (!dom) {
+                throw Error("O id informado não existe");
+            }
+
+            return dom.innerHTML;
+
+        }
+
+        try {
+            console.log(resgatarId('teste'));   
+            alert(resgatarId('paragrafo'));
+        } catch (error) {
+            alert(error.message);
+            console.log(error);
+        }
+
+        alert("Programa finalizado!");
+    </script>
+</body>
+
+</html>

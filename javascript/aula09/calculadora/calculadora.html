@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calc">
+        <div class="container">
+            <h1>Calculadora de IMC</h1>
+            <div class="entrada_calc">
+                <label for="altura">Altura:</label>
+                <input id="altura" type="number" placeholder="Digite sua altura em cm">
+            </div>
+            <div class="entrada_calc">
+                <label for="peso"> Peso:</label>
+                <input id="peso" type="number" placeholder="Digite seu peso em Kg">
+            </div>
+
+            <button onclick="exibirIMC()">Calcular</button>
+            <div id="resultado_imc"></div>
+        </div>
+
+    </div>
+    <script>
+        let altura = document.querySelector('#altura').value;
+        console.log(altura);
+        let peso = document.querySelector('#peso').value;
+        console.log(peso);
+
+        let calcularIMC = function (altura, peso) {
+            return peso / (altura * altura);
+        }
+
+        function exibirIMC() {
+            let resultado_imc = document.querySelector('#resultado_imc');
+            let imc = calcularIMC(altura, peso);
+
+            if (imc < 18.5) {
+                resultado_imc.textContent = 'Você está abaixo da faixa de IMC esperado';
+            } else if (imc >= 18.5 && imc <= 24.9) {
+                resultado_imc.textContent = 'Seu IMC está dentro da faixa normal';
+            } else if (24.9 < imc < 29.9){
+                resultado_imc.textContent = 'Seu IMC está acima da faixa normal';
+            } else if (imc >= 29.9 && imc <= 34.9) {
+                resultado_imc.textContent = 'Seu IMC está acima da faixa normal';
+            }
+        }
+
+        document.querySelector('#resultado_imc').innerHTML = `<p> ${text} </p>`
+    </script>
+
+    </script>
+</body>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="imparOuPar()">Iniciar</button>
+    <p id="resposta"></p>
+
+    <script>
+        function imparOuPar() {
+            let num = Number(prompt('Digite um numero: '));
+            let msg = `O número ${num} é: `
+
+            try {
+
+                if (isNaN(num)) {
+                    throw new Error(`Digite apenas um numero `)
+                }
+
+                if (num % 2 == 0) {
+                    msg = ' Par'
+                } else {
+                    msg = ' Impar'
+                }
+
+
+            } catch (error) {
+                console.log(error.message);
+                msg = " O valor inserido não é um numero"
+            }
+
+            if (num % 2 == 0) {
+                msg = ' Par'
+            } else {
+                msg = ' Impar'
+            }
+
+            let resposta = document.getElementById('resposta');
+            resposta.innerHTML = msg;
+        }
+    </script>
+</body>
+
+</html>

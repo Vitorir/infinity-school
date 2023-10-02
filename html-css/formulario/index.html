@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Formulário de Contato</h1>
+    <h2>Preencha os dados abaixo: </h2>
+
+    <label for="nome">Nome: </label>
+    <input type="text" placeholder="Nome*" required>
+    <input type="text" placeholder="Sobrenome*" required> <br> <br>
+
+    <label for="email">Email: </label>
+    <input type="email" name="email" id="email" placeholder="Email*" required> <br> <br>
+
+    <label for="telefone">Número de telefone: </label>
+    <input type="number" name="telefone" id="telefone" placeholder="Número*" required> <br> <br>
+
+    <label>Gênero: </label>
+    <input type="radio" name="opcao" value="opcao1">Masculino<br>
+    <input type="radio" name="opcao" value="opcao2">Feminino<br>
+    <input type="radio" name="opcao" value="opcao3">Prefiro não dizer<br><br>
+
+    <label>O que você gostaria que fosse melhorado na nossa loja?: </label>
+      <input type="checkbox" name="item1" value="Item 1">Atendimento<br>
+      <input type="checkbox" name="item2" value="Item 2">Entrega<br>
+      <input type="checkbox" name="item3" value="Item 3">Cardápio<br>
+      <input type="checkbox" name="item4" value="Item 4">Promoções<br>
+      <input type="checkbox" name="item5" value="Item 5">Pagamento<br> <br>
+
+    <label for="tema">Tema do contato: </label>
+    <select name="tema" id="tema">
+        <option value="1">Selecione uma opção: </option>
+        <option value="2">Dúvida</option>
+        <option value="3">Elogio</option>
+        <option value="4">Reclamação</option>
+        <option value="5">Parceria</option>
+        <option value="6">Sugestão</option>
+    </select> <br> <br>
+
+    <label for="comentario">Deixe a sua mensagem: </label>
+    <textarea name="comentario" id="comentario" cols="30" rows="10" required></textarea> <br>
+
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Limpar</button>
+</body>
+
+</html>

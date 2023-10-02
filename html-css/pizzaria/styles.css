@@ -1,0 +1,126 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  /* Estilos do Header */
+  header {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .logo img {
+    max-width: 100%;
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+  }
+  
+  .menu li {
+    margin-left: 30px;
+  }
+  
+  .menu li:first-child {
+    margin-left: 0;
+  }
+  
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.2s ease-in-out;
+}
+  
+.menu a:hover {
+    color: #e74c3c;
+}
+  
+.menu-left {
+    display: flex;
+    list-style: none;
+}
+
+.menu-left li {
+    margin-left: 20px;
+}
+
+.menu-left a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.2s ease-in-out;
+  }
+  
+.menu-left a:hover {
+    color: #e74c3c;
+}
+
+/* APRESENTAÇÃO */
+
+/* Estilos da seção de Apresentação */
+.apresentacao {
+    background-image: url(assets/img/pizza-google2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.apresentacao h1, h2 {
+    font-size: 48px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-box {
+    height: 100%;
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 1px solid #e4e4e4;
+}
+
+.login-box li {
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.login-box a {
+    
+}

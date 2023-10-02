@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function resolverDepois4Segundos() {
+            return new Promise(resposta => {
+                setTimeout(() => {
+                    resposta("resolvido")
+                }, 4000)
+            })
+        }
+
+        async function chamadaAsync() {
+            console.log('esperando');
+            const result = await resolverDepois4Segundos();
+            console.log(result);
+        }
+
+        chamadaAsync();
+
+        console.log("Primeira coisa a ser exibida!");
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <span id="valor">Valor</span> <br> <br>
+    <button id="inc" onclick="incrementar()">Incrementar</button>
+    <button id="dec" onclick="decrementar()">Decrementar</button>
+    <button id="zera" onclick="zerar()">Zerar</button>
+
+    <script>
+        let valor = document.querySelector('#valor');
+
+        let cont = 0;
+
+
+        function incrementar() {
+            cont++;
+            valor.innerHTML = cont;
+        }
+        function decrementar() {
+            cont--;
+            valor.innerHTML = cont;
+        }
+        function zerar() {
+            valor.innerHTML = 0;
+        }
+
+    </script>
+</body>
+</html>
